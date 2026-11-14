@@ -32,7 +32,7 @@ body:
     id: neoforge-version
     attributes:
       label: NeoForge version
-      placeholder: "Example: 21.1.200"
+      placeholder: "Example: 21.1.200 or just 225"
     validations:
       required: true
 
