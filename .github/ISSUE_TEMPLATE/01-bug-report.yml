@@ -1,16 +1,14 @@
 name: Bug Report
 description: Report a problem with UniPanels
 title: "[Bug] "
-labels:
-  - bug
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a UniPanels issue.
+        Thank you for reporting a UniPanels issue.
 
-        Please provide as much information as possible so the problem can be reproduced.
+        Please provide as much information as possible so the problem can be reproduced and eventually fixed.
 
   - type: input
     id: unipanels-version
