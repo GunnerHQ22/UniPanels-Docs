@@ -147,7 +147,7 @@ body:
       label: Before submitting
       description: Please confirm the following before creating the issue.
       options:
-        - label: I checked that I am using the latest available UniPanels version.
+        - label: I have included the UniPanels version I am using and checked whether a newer version may already contain a fix.
           required: true
         - label: I checked that this issue has not already been reported.
           required: true
