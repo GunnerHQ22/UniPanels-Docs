@@ -1,0 +1,134 @@
+name: Bug Report
+description: Report a problem with UniPanels
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a UniPanels issue.
+
+        Please provide as much information as possible so the problem can be reproduced.
+
+  - type: input
+    id: unipanels-version
+    attributes:
+      label: UniPanels version
+      placeholder: "Example: 0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version
+      placeholder: "Example: 1.21.1"
+    validations:
+      required: true
+
+  - type: input
+    id: neoforge-version
+    attributes:
+      label: NeoForge version
+      placeholder: "Example: 21.1.200"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Singleplayer
+        - Multiplayer - dedicated server
+        - Multiplayer - LAN
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: panel-type
+    attributes:
+      label: Panel type
+      options:
+        - Basic Panel
+        - Advanced Panel
+        - Color Panel
+        - Texture Panel
+        - Data Display Probe
+        - GUI / general
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+      placeholder: Tell me what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please list the exact steps that cause the issue.
+      placeholder: |
+        1. Place an Advanced Panel
+        2. Open Sources
+        3. Link ...
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect UniPanels to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: mods
+    attributes:
+      label: Relevant mods
+      description: List mods that may be related, especially AE2, Mekanism, Ars Nouveau, REI or EMI.
+      placeholder: |
+        Applied Energistics 2:
+        Mekanism:
+        Ars Nouveau:
+        REI / EMI:
+        Other relevant mods:
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste relevant log sections or attach the log file if available.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or video
+      description: Drag and drop screenshots or recordings here if they help explain the issue.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that I am using the latest available UniPanels version.
+          required: true
+        - label: I checked that this issue has not already been reported.
+          required: true
