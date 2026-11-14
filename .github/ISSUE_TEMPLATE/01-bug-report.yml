@@ -3,6 +3,7 @@ description: Report a problem with UniPanels
 title: "[Bug] "
 labels:
   - bug
+
 body:
   - type: markdown
     attributes:
@@ -39,10 +40,12 @@ body:
     id: environment
     attributes:
       label: Environment
+      description: Where did the issue occur?
       options:
         - Singleplayer
         - Multiplayer - dedicated server
         - Multiplayer - LAN
+        - Client-only / visual issue
         - Other
     validations:
       required: true
@@ -51,6 +54,7 @@ body:
     id: panel-type
     attributes:
       label: Panel type
+      description: Which UniPanels component appears to be affected?
       options:
         - Basic Panel
         - Advanced Panel
@@ -58,6 +62,7 @@ body:
         - Texture Panel
         - Data Display Probe
         - GUI / general
+        - Unknown / Not sure
         - Other
     validations:
       required: true
@@ -79,8 +84,9 @@ body:
       placeholder: |
         1. Place an Advanced Panel
         2. Open Sources
-        3. Link ...
-        4. ...
+        3. Link a source
+        4. Configure ...
+        5. The issue occurs
     validations:
       required: true
 
@@ -89,6 +95,7 @@ body:
     attributes:
       label: Expected behavior
       description: What did you expect UniPanels to do?
+      placeholder: Describe what should have happened.
     validations:
       required: true
 
@@ -96,7 +103,7 @@ body:
     id: mods
     attributes:
       label: Relevant mods
-      description: List mods that may be related, especially AE2, Mekanism, Ars Nouveau, REI or EMI.
+      description: List mods that may be related to the issue, especially supported integrations or UI mods.
       placeholder: |
         Applied Energistics 2:
         Mekanism:
@@ -111,6 +118,7 @@ body:
     attributes:
       label: Logs
       description: Paste relevant log sections or attach the log file if available.
+      placeholder: Paste relevant logs here, or attach the log file below.
       render: shell
     validations:
       required: false
@@ -120,6 +128,16 @@ body:
     attributes:
       label: Screenshots or video
       description: Drag and drop screenshots or recordings here if they help explain the issue.
+      placeholder: Add screenshots, recordings, or other visual evidence if useful.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add anything else that may help reproduce or understand the issue.
+      placeholder: Any other useful information.
     validations:
       required: false
 
@@ -127,6 +145,7 @@ body:
     id: checks
     attributes:
       label: Before submitting
+      description: Please confirm the following before creating the issue.
       options:
         - label: I checked that I am using the latest available UniPanels version.
           required: true
